@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 import { footer } from '../styles/footer.scss';
 import Routes from '../routes';
 
+import img from '../images/testblomster.jpg';
 const App = () =>
     <div>
         <h1>Filter table</h1>
+        <img src={img} />
         { Routes }
         <footer className={footer}>
             <Link to="/">Filterable Table</Link>
