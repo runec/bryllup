@@ -13,7 +13,7 @@ class Countdown extends React.Component {
   }
 
   componentDidMount() {
-    this.timer = setInterval(this.props.refresh, 200);
+    this.timer = setInterval(this.props.refresh, 500);
   }
 
   componentWillUnmount() {
@@ -42,7 +42,6 @@ Countdown.propTypes = {
 const mapDispatchToProps = (dispatch) => {
   return {
     refresh: () => {
-      console.warn('distpatvchh');
       dispatch(refreshCurrentMoment());
     }
   };
