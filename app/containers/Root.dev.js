@@ -8,7 +8,7 @@ import App from '../components/App';
 import DevTools from './DevTools';
 
 export default function Root({store, history}) {
-    return (
+  return (
         <Provider store={store}>
             <div>
                 <ConnectedRouter history={history}>
@@ -21,6 +21,6 @@ export default function Root({store, history}) {
 }
 
 Root.propTypes = {
-    store: PropTypes.object.isRequired,
-    history: PropTypes.object.isRequired
+  store: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired
 };

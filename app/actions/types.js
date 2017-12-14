@@ -1,1 +1,1 @@
-export const FILTER = 'FILTER';
+export const REFRESH_CURRENT_MOMENT = 'REFRESH_CURRENT_MOMENT';

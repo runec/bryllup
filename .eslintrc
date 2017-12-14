@@ -8,7 +8,8 @@
   "globals": {
     "expect": true,
     "sinon": true,
-    "__DEV__": true
+    "__DEV__": true,
+    "moment": true,
   },
   "ecmaFeatures": {
     "arrowFunctions": true,
@@ -115,11 +116,11 @@
      */
     "indent": [
       2,
-      4,
+      2,
       { "SwitchCase": 1 }
     ],                              // http://eslint.org/docs/rules/indent
     "brace-style": [
-      2,                          
+      2,
       "1tbs", {
         "allowSingleLine": true
       }

@@ -1,18 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { footer } from '../styles/footer.scss';
-import Routes from '../routes';
 
 import img from '../images/testblomster.jpg';
+import Countdown from '../containers/Countdown';
+
+const bryllupsdag = moment({year: 2018, month: 8, day: 11, hour: 12, minute: 0, second: 0});
+
 const App = () =>
     <div>
-        <h1>Filter table</h1>
         <img src={img} />
-        { Routes }
-        <footer className={footer}>
-            <Link to="/">Filterable Table</Link>
-            <Link to="/about">About</Link>
-        </footer>
+        <Countdown
+          targetMoment={bryllupsdag}
+        />
     </div>;
 
 export default App;

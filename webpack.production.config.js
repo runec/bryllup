@@ -56,7 +56,7 @@ module.exports = {
         new webpack.ProvidePlugin({
           $: "jquery",
           jQuery: "jquery",
-          moment: 'moment-timezone',
+          moment: 'moment',
         }),
     ],
 
