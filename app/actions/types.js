@@ -1,1 +1,2 @@
 export const REFRESH_CURRENT_MOMENT = 'REFRESH_CURRENT_MOMENT';
+export const ANSWER_Q = 'ANSWER_Q';

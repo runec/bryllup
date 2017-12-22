@@ -9,8 +9,8 @@ const TanjaRouter = ({history}) => {
   return (
     <ConnectedRouter history={history}>
       <Switch>
-        <Route exact path="/" component={CountdownApp}/>
-        <Route path="/hemmelig" component={BryllupsApp} />
+        <Route exact path="/" component={BryllupsApp}/>
+        <Route path="/hemmelig" component={CountdownApp} />
       </Switch>
     </ConnectedRouter>
   );

@@ -1,0 +1,42 @@
+.saveTheDateDiv {
+  @media screen and (min-width: 600px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 599px) {
+    width: 100%;
+  }
+  margin: 0 auto;
+}
+
+.durationDisplay {
+  @media screen and (min-width: 600px) {
+    font-size: 20pt;
+    margin-top: 20px;
+  }
+  @media screen and (max-width: 599px) {
+    font-size: 18pt;
+    margin-top: 0px;
+
+  }
+  font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
+  width: 100%;
+  text-align: center;
+}
+
+#saveTheDateImg {
+  @media screen and (min-width: 600px) {
+    display: block;
+  }
+  @media screen and (max-width: 599px) {
+    display: none;
+  }
+}
+
+#saveTheDateMobileImg {
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
+  @media screen and (max-width: 599px) {
+    display: block;
+  }
+}

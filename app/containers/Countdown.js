@@ -24,6 +24,7 @@ class Countdown extends React.Component {
     if(!this.props.currentMoment) {
       return null;
     }
+
     const duration = moment.duration(this.props.targetMoment.diff(moment()));
     return (
       <DurationDisplay

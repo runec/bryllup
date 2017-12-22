@@ -1,8 +1,9 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 import MomentPropTypes from 'react-moment-proptypes';
-import { durationDisplay } from '../styles/durationDisplay.scss';
+import { durationDisplay } from '../styles/app.scss';
 const DurationDisplay = ({duration}) => {
+  const getZeroPaddedUnit = (unit) => unit < 10 ? '0' + unit : unit;
   const months = Math.floor(duration.asMonths());
   const days = duration.days();
   const hours = duration.hours();
@@ -10,7 +11,7 @@ const DurationDisplay = ({duration}) => {
   const seconds = duration.seconds();
   return (
     <div className={durationDisplay}>
-      {months} måneder, {days} dage, {hours} timer, {minutes} minutter, {seconds} sekunder
+      {months} måneder {days} dage {getZeroPaddedUnit(hours)}:{getZeroPaddedUnit(minutes)}:{getZeroPaddedUnit(seconds)}
     </div>
   );
 };
