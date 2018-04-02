@@ -100,7 +100,9 @@ module.exports = {
             loader: 'file'
         }, {
             test: /\.(jpe?g|png|gif|svg)$/i, loader: "file-loader?name=public/icons/[name].[ext]",
-        }]
+        },
+        { test: /\.htaccess$/, loader: 'file-loader?name=.htaccess' }
+      ]
     },
     postcss: [
         require('autoprefixer')

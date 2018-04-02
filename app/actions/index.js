@@ -10,3 +10,7 @@ export const answerQ = (qNumber, answer) => ({
   qNumber: qNumber,
   answer: answer,
 });
+
+export const showHint = () => ({
+  type: types.SHOW_HINT,
+});

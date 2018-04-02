@@ -1,17 +1,10 @@
 import React from 'react';
 
-import img from '../images/testblomster.jpg';
-import imgOther from '../images/savethedate-1.jpg';
-import Countdown from '../containers/Countdown';
-
-const bryllupsdag = moment({year: 2018, month: 8, day: 11, hour: 12, minute: 0, second: 0});
+import QContainer from '../containers/QContainer';
 
 const CountdownApp = () =>
-    <div>
-        <img src={imgOther} />
-        <Countdown
-          targetMoment={bryllupsdag}
-        />
+    <div style={{backgroundColor: '#f7f1e7', minHeight: '100vh'}}>
+        <QContainer />
     </div>;
 
 export default CountdownApp;

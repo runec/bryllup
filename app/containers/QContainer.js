@@ -2,9 +2,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { Button } from 'react-bootstrap';
+import { answerQ, showHint } from '../actions';
 
-import { answerQ } from '../actions';
+import Q1 from '../components/Q1';
+import Q2 from '../components/Q2';
+import Q3 from '../components/Q3';
+import Q4 from '../components/Q4';
+import Win from '../components/Win';
+
 class QContainer extends React.Component {
 
   constructor(props) {
@@ -14,40 +19,56 @@ class QContainer extends React.Component {
   render() {
     if(this.props.currentQ === 1) {
       return (
-
-      )
+        <div>
+        <Q1 onSubmit={this.props.answerQ1} />
+        <div style={{textAlign: 'center'}}>Brugte gæt: {this.props.wrongGuesses}</div>
+        <div onClick={this.props.showHint} style={{fontWeight: 'bold', textAlign: 'center', cursor: 'pointer'}}>Hint: {this.props.showQHint ? this.props.hintText : '3 gæt først'}</div>
+      </div>
+        // tree
+      );
     } else if(this.props.currentQ === 2) {
       return (
-
-      )
+        <div>
+        <Q2 onSubmit={this.props.answerQ2} />
+        <div style={{textAlign: 'center'}}>Brugte gæt: {this.props.wrongGuesses}</div>
+        <div onClick={this.props.showHint} style={{fontWeight: 'bold', textAlign: 'center', cursor: 'pointer'}}>Hint: {this.props.showQHint ? this.props.hintText : '3 gæt først'}</div>
+      </div>
+        // hp
+      );
     } else if(this.props.currentQ === 3) {
       return (
-
-      )
-    } else {
+      <div>
+        <Q3 onSubmit={this.props.answerQ3} />
+      </div>
+        // circle?
+      );
+    } else if(this.props.currentQ === 4) {
+      // pal
       return (
         <div>
-          done!
-        </div>
-      )
-    }
-    return (
-      <div>
-        <div>test</div>
-        <Button onClick={()=>{console.log('lol');}}>Hej</Button>
+        <Q4 onSubmit={this.props.answerQ4} />
+        <div style={{textAlign: 'center'}}>Brugte gæt: {this.props.wrongGuesses}</div>
+        <div onClick={this.props.showHint} style={{fontWeight: 'bold', textAlign: 'center', cursor: 'pointer'}}>Hint: {this.props.showQHint ? this.props.hintText : '3 gæt først'}</div>
       </div>
-    );
-
-
-    // hint
-    // input
-    // error message
-    // button
+      );
+    } else {
+      return (
+        <Win />
+      );
+    }
   }
 }
 
 QContainer.propTypes = {
-
+  answerQ1: PropTypes.func.isRequired,
+  answerQ2: PropTypes.func.isRequired,
+  answerQ3: PropTypes.func.isRequired,
+  answerQ4: PropTypes.func.isRequired,
+  currentQ: PropTypes.oneOf([1, 2, 3, 4, 5]).isRequired,
+  wrongGuesses: PropTypes.number.isRequired,
+  hintText: PropTypes.string.isRequired,
+  showHint: PropTypes.func.isRequired,
+  showQHint: PropTypes.bool.isRequired,
 };
 
 const mapDispatchToProps = (dispatch) => {
@@ -61,6 +82,10 @@ const mapDispatchToProps = (dispatch) => {
     answerQ3: (answer) => {
       dispatch(answerQ(3, answer));
     },
+    answerQ4: (answer) => {
+      dispatch(answerQ(4, answer));
+    },
+    showHint: () => dispatch(showHint())
   };
 };
 
@@ -70,6 +95,7 @@ const mapStateToProps = (state) => {
       currentQ,
       wrongGuesses,
       hintText,
+      showQHint,
     }
   } = state;
 
@@ -77,6 +103,7 @@ const mapStateToProps = (state) => {
     currentQ,
     wrongGuesses,
     hintText,
+    showQHint,
   };
 };
 

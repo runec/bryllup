@@ -40,3 +40,129 @@
     display: block;
   }
 }
+
+$char-w: 1ch;
+$gap: .5*$char-w;
+
+.qInput5 {
+	display: block;
+	margin: 1em auto;
+	border: none;
+	padding: 0;
+	width: 5*($char-w + $gap);
+	background: repeating-linear-gradient(90deg,
+		dimgrey 0, dimgrey $char-w,
+		transparent 0, transparent $char-w + $gap)
+		0 100%/ #{5*($char-w + $gap) - $gap} 2px no-repeat;
+	font: 5ch droid sans mono, consolas, monospace;
+	letter-spacing: $gap;
+
+	&:focus {
+		outline: none;
+		color: dodgerblue;
+	}
+}
+
+.qInput4 {
+	display: block;
+	margin: 1em auto;
+	border: none;
+	padding: 0;
+	width: 4*($char-w + $gap);
+	background: repeating-linear-gradient(90deg,
+		dimgrey 0, dimgrey $char-w,
+		transparent 0, transparent $char-w + $gap)
+		0 100%/ #{4*($char-w + $gap) - $gap} 2px no-repeat;
+	font: 5ch droid sans mono, consolas, monospace;
+	letter-spacing: $gap;
+
+	&:focus {
+		outline: none;
+		color: dodgerblue;
+	}
+}
+
+.qInput6 {
+	display: block;
+	margin: 1em auto;
+	border: none;
+	padding: 0;
+	width: 6*($char-w + $gap);
+	background: repeating-linear-gradient(90deg,
+		dimgrey 0, dimgrey $char-w,
+		transparent 0, transparent $char-w + $gap)
+		0 100%/ #{6*($char-w + $gap) - $gap} 2px no-repeat;
+	font: 5ch droid sans mono, consolas, monospace;
+	letter-spacing: $gap;
+
+	&:focus {
+		outline: none;
+		color: dodgerblue;
+	}
+}
+
+.qInput3 {
+	display: block;
+	margin: 1em auto;
+	border: none;
+	padding: 0;
+	width: 3*($char-w + $gap);
+	background: repeating-linear-gradient(90deg,
+		dimgrey 0, dimgrey $char-w,
+		transparent 0, transparent $char-w + $gap)
+		0 100%/ #{3*($char-w + $gap) - $gap} 2px no-repeat;
+	font: 5ch droid sans mono, consolas, monospace;
+	letter-spacing: $gap;
+
+	&:focus {
+		outline: none;
+		color: dodgerblue;
+	}
+}
+
+.qInput7 {
+	display: block;
+	margin: 1em auto;
+	border: none;
+	padding: 0;
+	width: 7*($char-w + $gap);
+	background: repeating-linear-gradient(90deg,
+		dimgrey 0, dimgrey $char-w,
+		transparent 0, transparent $char-w + $gap)
+		0 100%/ #{7*($char-w + $gap) - $gap} 2px no-repeat;
+	font: 5ch droid sans mono, consolas, monospace;
+	letter-spacing: $gap;
+
+	&:focus {
+		outline: none;
+		color: dodgerblue;
+	}
+}
+
+.qInput9 {
+	display: block;
+	margin: 1em auto;
+	border: none;
+	padding: 0;
+	width: 9*($char-w + $gap);
+	background: repeating-linear-gradient(90deg,
+		dimgrey 0, dimgrey $char-w,
+		transparent 0, transparent $char-w + $gap)
+		0 100%/ #{9*($char-w + $gap) - $gap} 2px no-repeat;
+	font: 5ch droid sans mono, consolas, monospace;
+	letter-spacing: $gap;
+
+	&:focus {
+		outline: none;
+		color: dodgerblue;
+	}
+}
+
+.questionDiv {
+  width:100%;
+
+  div, h1 {
+    margin: 0 auto 20px auto;
+    text-align: center;
+  }
+}
