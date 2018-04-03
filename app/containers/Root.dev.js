@@ -3,15 +3,13 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import DevTools from './DevTools';
-import TanjaRouter from './TanjaRouter';
+import BryllupsApp from './BryllupsApp';
 
 export default function Root({store, history}) {
   return (
         <Provider store={store}>
           <div>
-            <TanjaRouter
-              history={history}
-            />
+            <BryllupsApp history={history} />
             <DevTools />
           </div>
         </Provider>

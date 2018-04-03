@@ -40,6 +40,10 @@ Countdown.propTypes = {
   refresh: PropTypes.func.isRequired,
 };
 
+Countdown.defaultProps = {
+  targetMoment: moment(),
+};
+
 const mapDispatchToProps = (dispatch) => {
   return {
     refresh: () => {
