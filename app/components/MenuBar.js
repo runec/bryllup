@@ -3,14 +3,16 @@ import PropTypes from 'prop-types';
 
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 
-import { MenuBar as MenuBarClass } from '../styles/app.scss';
+import { MenuBar as MenuBarClass, MenuDate } from '../styles/app.scss';
+
+import TanjaOgRuneBrand from '../images/tanjaogrune.png';
 
 const MenuBar = ({goToLocation}) => {
   return (
-    <Navbar fluid className={MenuBarClass}>
+    <Navbar fluid id={MenuBarClass}>
       <Navbar.Header>
         <Navbar.Brand>
-          <div style={{cursor: 'pointer'}} onClick={() => goToLocation('/')}>TANJA + RUNE</div>
+          <div style={{cursor: 'pointer'}} onClick={() => goToLocation('/')}><img src={TanjaOgRuneBrand}/></div>
         </Navbar.Brand>
       </Navbar.Header>
       <Navbar.Toggle />
@@ -24,6 +26,11 @@ const MenuBar = ({goToLocation}) => {
           </NavItem>
           <NavItem eventKey={3} href="#">
             Ønskeliste
+          </NavItem>
+        </Nav>
+        <Nav pullRight>
+          <NavItem>
+            <span id={MenuDate}>11. august 2018, kl. 13<span style={{verticalAlign: 'super', fontSize: '50%'}}>30</span></span>
           </NavItem>
         </Nav>
       </Navbar.Collapse>

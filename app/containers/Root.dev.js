@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import DevTools from './DevTools';
+// import DevTools from './DevTools';
 import BryllupsApp from './BryllupsApp';
 
 export default function Root({store, history}) {
@@ -10,7 +10,8 @@ export default function Root({store, history}) {
         <Provider store={store}>
           <div>
             <BryllupsApp history={history} />
-            <DevTools />
+            {// }<DevTools />
+          }
           </div>
         </Provider>
     );

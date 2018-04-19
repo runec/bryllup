@@ -5,7 +5,9 @@ import { connect } from 'react-redux';
 class PraktiskContainer extends React.Component {
   render() {
     return (
-      <div />
+      <div>
+        Praktisk
+      </div>
     );
   }
 }

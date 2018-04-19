@@ -5,19 +5,19 @@ import TanjaRouter from './TanjaRouter';
 import MenuBarContainer from './MenuBarContainer';
 
 import BackgroundImage from '../images/baggrund.jpg';
-import { mainContainer, content, background } from '../styles/app.scss';
+import { MainContainer, MainContent, background } from '../styles/app.scss';
 
 const BryllupsApp = ({history}) => {
   return (
-    <div className={mainContainer}>
-      <MenuBarContainer />
-      <div className={content}>
-        <TanjaRouter history={history} />
+      <div id={MainContainer}>
+        <MenuBarContainer />
+        <div id={MainContent}>
+          <TanjaRouter history={history} />
+          <div id={background}>
+            <img src={BackgroundImage}/>
+          </div>
+        </div>
       </div>
-      <div id={background}>
-        <img src={BackgroundImage}/>
-      </div>
-    </div>
   );
 };
 
