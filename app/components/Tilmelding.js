@@ -23,7 +23,8 @@ class Tilmelding extends React.Component {
       names: '',
       allergies: '',
       musicChoices: '',
-      attendingBrunch: false,
+      attendingBrunch: true,
+      stayForTheNight: true
     };
     this.onTilmeld = this.onTilmeld.bind(this);
   }
@@ -51,6 +52,9 @@ class Tilmelding extends React.Component {
         <h2>
           TILMELDING
         </h2>
+        <p>
+          Man kan også melde sig til ved at skrive eller ringe til os. E-mail og telefonnummer står i invitationen.
+        </p>
         <Form horizontal>
     <FormGroup controlId="formHorizontalNames">
       <Col componentClass={ControlLabel} sm={4}>
@@ -63,19 +67,28 @@ class Tilmelding extends React.Component {
 
     <FormGroup controlId="formHorizontalAllergies">
       <Col componentClass={ControlLabel} sm={4}>
-        Allergier
+        Madrestriktioner
       </Col>
       <Col sm={8}>
-        <FormControl type="text" value={this.state.allergies} onChange={(e)=>this.setState({allergies: e.target.value})} />
+        <FormControl type="text" placeholder="F.eks. vegetar, nøddeallergi" value={this.state.allergies} onChange={(e)=>this.setState({allergies: e.target.value})} />
       </Col>
     </FormGroup>
 
     <FormGroup controlId="formHorizontalPassword">
       <Col componentClass={ControlLabel} sm={4}>
-        Musikønsker
+        Evt. musikønsker
       </Col>
       <Col sm={8}>
         <FormControl type="textarea" componentClass="textarea" value={this.state.musicChoices} onChange={(e)=>this.setState({musicChoices: e.target.value})}/>
+      </Col>
+    </FormGroup>
+
+    <FormGroup>
+      <Col componentClass={ControlLabel} sm={4}>
+        Overnatter ved gården
+      </Col>
+      <Col sm={8}>
+        <Checkbox checked={this.state.stayForTheNight} onClick={()=>this.setState({stayForTheNight: !this.state.stayForTheNight})}/>
       </Col>
     </FormGroup>
 

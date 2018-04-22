@@ -9,16 +9,24 @@ const Praktisk = () => {
     <div className={`${FullPageInfoBox} ${InfoBox}`}>
       <ContentBox>
         <h2>Praktisk</h2>
-        <p>ff</p>
         <h3>Dresscode</h3>
         <p>
-        Flere gæster har spurgt til dresscode. I er smukke som I er, men bliver vi tvunget til at sætte ord på tænker vi business/informal – eller på godt dansk, festtøj, således at der er ”frit valg i den pæne afdeling”
-        rimelig fint tøj, pas på de høje hæle dog! Udendørs, så der er jord og græs og evt regn.
+        Flere gæster har spurgt til dresscode. I er smukke som I er, men bliver vi tvunget til at sætte ord på tænker vi business/informal – eller på godt dansk, festtøj, således at der er ”frit valg i den pæne afdeling”.
+        Det er dog nok en god idé at undgå sko med høje, spidse hæle og kjoler med slæb, da planen er at holde festen i et telt i haven.
+        <p>
+          Det er også en god idé at tage en varm trøje med, hvis det skulle blive køligt i løbet af aftenen eller natten.
         </p>
-        <h3>Bryllups-brunch</h3>
-        <p>Vi håber at alle bliver til langt ude på natten, derfor vil vi også gerne invitere til en uformel bryllups-brunch søndag morgen kl. XX, på samme adresse som brylluppet.</p>
+        </p>
+        <h3>Overnatning og bryllups-brunch</h3>
+        <p>
+          Det er ikke nemt at komme væk fra Fejø efter kl. 23, så vi håber på, at de fleste af jer gerne vil blive og overnatte.
+          Der er desværre slet ikke nok sengepladser til alle på gården, men der er en stor have hvor der er plads til at slå telte op.
+        </p>
+        <p>Dagen derpå vil vi gerne byde på en uformel bryllups-brunch søndag morgen kl. 11, på samme adresse som brylluppet.</p>
         <h3>Sociale medier</h3>
-        <p>Meget velkomne til at tage billeder, men helst ikke alt muligt på Facebook, tak!</p>
+        <p>I er selvfølgelig meget velkomne til at tage billeder i løbet af dagen! Men vi vil være glade for, at man ikke lægger noget offentligt ud på Facebook, Instagram e.l. uden at spørge os først. Snapchat er ok!</p>
+        <h3>Taler og indslag</h3>
+        <p>Pønser man på at sige et par ord eller lave et andet sjovt indslag, skal man være meget velkommen! Bare henvend jer til toastmaster Jonas Bøndergaard.</p>
       </ContentBox>
     </div>
   );

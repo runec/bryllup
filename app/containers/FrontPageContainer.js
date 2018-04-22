@@ -52,10 +52,8 @@ const mapDispatchToProps = (dispatch) => {
         musicChoices: musicChoices,
         attendingBrunch: attendingBrunch,
       }).then((res) => {
-        console.log('sent request hooray', res);
         dispatch(tilmeldSucceeded());
       }).catch((err) => {
-        console.error('some error :(', err);
         dispatch(tilmeldFailed());
       });
     }

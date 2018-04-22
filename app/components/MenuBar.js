@@ -16,15 +16,16 @@ const MenuBar = ({goToLocation}) => {
         </Navbar.Brand>
       </Navbar.Header>
       <Nav>
+        <NavItem eventKey={2} onClick={() => goToLocation('/dagen')}>
+          Dagens forløb
+        </NavItem>
         <NavItem eventKey={1} onClick={()=> goToLocation('/praktisk')}>
           Praktisk
         </NavItem>
         <NavItem eventKey={4} onClick={() => goToLocation('/transport')}>
           Transport
         </NavItem>
-        <NavItem eventKey={2} onClick={() => goToLocation('/overnatning')}>
-          Overnatning
-        </NavItem>
+
         <NavItem eventKey={3} onClick={() => goToLocation('/wishlist')}>
           Ønskeliste
         </NavItem>
