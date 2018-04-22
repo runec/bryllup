@@ -44,16 +44,18 @@ FrontPageContainer.propTypes = {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    tilmeld: (names, allergies, musicChoices, attendingBrunch) => {
+    tilmeld: (names, allergies, musicChoices, attendingBrunch, stayForTheNight) => {
       dispatch(tilmeldSent());
       axios.post('http://www.tanja-rune-2018.dk:3030/tilmeld', {
         names: names,
         allergies: allergies,
         musicChoices: musicChoices,
         attendingBrunch: attendingBrunch,
-      }).then((res) => {
+        stayForTheNight: stayForTheNight,
+      }).then(() => {
         dispatch(tilmeldSucceeded());
       }).catch((err) => {
+        console.error('Error during tilmelding', err);
         dispatch(tilmeldFailed());
       });
     }

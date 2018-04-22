@@ -30,7 +30,7 @@ class Tilmelding extends React.Component {
   }
 
   onTilmeld() {
-    this.props.onTilmeld(this.state.names, this.state.allergies, this.state.musicChoices, this.state.attendingBrunch);
+    this.props.onTilmeld(this.state.names, this.state.allergies, this.state.musicChoices, this.state.attendingBrunch, this.state.stayForTheNight);
   }
 
 
