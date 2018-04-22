@@ -1,5 +1,10 @@
+
+RewriteEngine On
+RewriteRule ^api/(.*)$ http://tanja-rune-2018.dk:3030/$1 [L,P]
+
 RewriteEngine On
 RewriteBase /
+
 RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
 RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
 RewriteRule ^ - [L]

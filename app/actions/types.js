@@ -1,3 +1,7 @@
 export const REFRESH_CURRENT_MOMENT = 'REFRESH_CURRENT_MOMENT';
 export const ANSWER_Q = 'ANSWER_Q';
 export const SHOW_HINT = 'SHOW_HINT';
+export const TILMELD = 'TILMELD';
+export const TILMELD_SUCCESS = 'TILMELD_SUCCESS';
+export const TILMELD_FAILURE = 'TILMELD_FAILURE';
+export const TILMELD_SENT = 'TILMELD_SENT';

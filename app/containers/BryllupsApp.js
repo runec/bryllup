@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import TanjaRouter from './TanjaRouter';
 import MenuBarContainer from './MenuBarContainer';
 
-import BackgroundImage from '../images/baggrund.jpg';
-import { MainContainer, MainContent, background } from '../styles/app.scss';
+// import BackgroundImage from '../images/baggrund.jpg';
+import { MainContainer, MainContent } from '../styles/app.scss';
 
 const BryllupsApp = ({history}) => {
   return (
@@ -13,9 +13,6 @@ const BryllupsApp = ({history}) => {
         <MenuBarContainer />
         <div id={MainContent}>
           <TanjaRouter history={history} />
-          <div id={background}>
-            <img src={BackgroundImage}/>
-          </div>
         </div>
       </div>
   );
