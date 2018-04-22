@@ -32,11 +32,20 @@ class Tilmelding extends React.Component {
     this.props.onTilmeld(this.state.names, this.state.allergies, this.state.musicChoices, this.state.attendingBrunch);
   }
 
-  render() {
-    return (<div>hrej</div>);
-  }
 
   render() {
+    let bottomPart;
+
+    if(this.props.tilmeldStatus === 'FAILURE') {
+      bottomPart = (<span><Button type="button" onClick={this.onTilmeld}>Tilmeld</Button> Tilmelding mislykkedes. Prøv igen</span>);
+    } else if(this.props.tilmeldStatus === 'PENDING') {
+      bottomPart = (<span>Venter på svar...</span>);
+    } else if(this.props.tilmeldStatus === 'SUCCESS') {
+      bottomPart = (<span><Button type="button" onClick={this.onTilmeld}>Tilmeld</Button> Tak for tilmeldingen!</span>);
+    } else {
+      bottomPart = (<Button type="button" onClick={this.onTilmeld}>Tilmeld</Button>);
+    }
+
     return (
       <ContentBox id={TilmeldingBox}>
         <h2>
@@ -81,11 +90,10 @@ class Tilmelding extends React.Component {
 
     <FormGroup>
       <Col smOffset={4} sm={8}>
-        <Button type="button" onClick={this.onTilmeld}>Tilmeld</Button>
+        {bottomPart}
       </Col>
     </FormGroup>
-    {this.props.tilmeldStatus}
-  </Form>;
+  </Form>
 
       </ContentBox>
     );
