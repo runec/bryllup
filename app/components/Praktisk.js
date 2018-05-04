@@ -2,13 +2,14 @@ import React from 'react';
 
 import ContentBox from './general/ContentBox';
 
-import { FullPageInfoBox, InfoBox } from '../styles/app.scss';
+import { FullPageInfoBox, InfoBox, PraktiskInfoWrapper, DagenImageWrapper } from '../styles/app.scss';
+import DagenImage from '../images/tidsplan1.png';
 
 const Praktisk = () => {
   return (
     <div className={`${FullPageInfoBox} ${InfoBox}`}>
       <ContentBox>
-        <h2>Praktisk</h2>
+        <div id={PraktiskInfoWrapper} style={{width: '70%', display: 'inline-block'}}>
         <h3>Dresscode</h3>
         <p>
         Flere gæster har spurgt til dresscode. I er smukke som I er, men bliver vi tvunget til at sætte ord på tænker vi business/informal – eller på godt dansk, festtøj, således at der er ”frit valg i den pæne afdeling”.
@@ -27,6 +28,11 @@ const Praktisk = () => {
         <p>I er selvfølgelig meget velkomne til at tage billeder i løbet af dagen! Men vi vil være glade for, at man ikke lægger noget offentligt ud på Facebook, Instagram e.l. uden at spørge os først. Snapchat er ok!</p>
         <h3>Taler og indslag</h3>
         <p>Pønser man på at sige et par ord eller lave et andet sjovt indslag, skal man være meget velkommen! Bare henvend jer til toastmaster Jonas Bøndergaard.</p>
+      </div>
+      <div id={DagenImageWrapper}>
+        <img src={DagenImage}/>
+      </div>
+
       </ContentBox>
     </div>
   );

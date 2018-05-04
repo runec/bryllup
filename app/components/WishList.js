@@ -12,7 +12,7 @@ const WishList = () => {
           Ønskeliste
         </h2>
         <p>
-          Coming soon!
+          Kommer snart! (midten af maj)
         </p>
       </ContentBox>
     </div>

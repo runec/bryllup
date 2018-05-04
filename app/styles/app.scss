@@ -178,3 +178,30 @@ saveTheDateDiv {
   width: 33%;
   top: 20%
 }
+
+#DagenImageWrapper {
+  height: 700px;
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+
+  img {
+    height: 700px;
+    filter: invert(100%);
+    float: right;
+  }
+}
+
+#PraktiskInfoWrapper {
+  width: 75%;
+  display: inline-block;
+}
+
+.ImageModal {
+  width: 90%!important;
+  text-align: center;
+  background-color: rgba(90,90,90,0.8);
+  :global(.modal-header) {
+    color: white;
+  }
+}

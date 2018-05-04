@@ -16,9 +16,6 @@ const MenuBar = ({goToLocation}) => {
         </Navbar.Brand>
       </Navbar.Header>
       <Nav>
-        <NavItem eventKey={2} onClick={() => goToLocation('/dagen')}>
-          Dagens forløb
-        </NavItem>
         <NavItem eventKey={1} onClick={()=> goToLocation('/praktisk')}>
           Praktisk
         </NavItem>
